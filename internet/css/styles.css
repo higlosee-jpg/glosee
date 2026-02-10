@@ -1,0 +1,153 @@
+/* reset & base */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; font-size: 14px; line-height: 1.5; color: #333; }
+a { color: #0066cc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+ul { list-style: none; margin: 0; padding: 0; }
+img { max-width: 100%; height: auto; vertical-align: middle; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* top bar */
+.top-bar { background: #1a1a2e; color: #fff; padding: 10px 20px; }
+.top-bar-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.top-bar .logo { font-weight: bold; font-size: 1.25rem; color: #fff; }
+.top-bar .logo:hover { text-decoration: none; color: #ffd700; }
+.btn-search { padding: 6px 12px; background: #333; color: #fff; border-radius: 4px; font-size: 13px; }
+.btn-search:hover { background: #444; }
+.customer-center { margin-left: auto; text-align: right; }
+.customer-center strong { display: block; font-size: 12px; color: #aaa; }
+.customer-center a { color: #ff8c00; font-size: 1.1rem; font-weight: bold; }
+.year-round { font-size: 12px; color: #aaa; }
+
+/* modal */
+.modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 9999; align-items: center; justify-content: center; padding: 20px; }
+.modal.is-open { display: flex; }
+.modal-content { background: #fff; border-radius: 8px; padding: 24px; max-width: 480px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; }
+.modal-close { position: absolute; top: 12px; right: 12px; padding: 4px 8px; font-size: 13px; color: #666; }
+.modal-close:hover { color: #000; }
+.modal-title { margin: 0 0 16px; font-size: 1.1rem; }
+.search-form { display: flex; gap: 8px; margin-bottom: 20px; }
+.search-form label { display: none; }
+.search-form input { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
+.search-form button { padding: 10px 20px; background: #1a1a2e; color: #fff; border-radius: 4px; }
+.popular-keywords h3 { font-size: 13px; margin-bottom: 8px; color: #666; }
+.popular-keywords ul { display: flex; flex-wrap: wrap; gap: 8px; }
+.popular-keywords a { font-size: 13px; }
+
+/* hero */
+.hero { background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%); color: #fff; padding: 40px 20px; text-align: center; }
+.hero-inner { max-width: 800px; margin: 0 auto; }
+.hero-title { font-size: clamp(1.5rem, 4vw, 2.2rem); margin: 0 0 12px; line-height: 1.3; }
+.hero-desc { font-size: 1.1rem; margin: 0 0 8px; }
+.hero-note { margin: 0; font-size: 14px; color: #ddd; }
+.hero-note strong { color: #ff8c00; }
+
+/* ticker */
+.ticker-wrap { background: #0f0f23; color: #fff; padding: 10px 0; overflow: hidden; display: flex; align-items: center; }
+.ticker-label { flex-shrink: 0; padding: 8px 16px; font-size: 12px; color: #fff; white-space: nowrap; background: #2a4a7a; border-radius: 4px; margin-left: 12px; }
+.ticker { flex: 1; overflow: hidden; }
+.ticker-inner { display: flex; width: max-content; }
+.ticker-wrap:not(.ticker-sms) .ticker-inner { animation: ticker 40s linear infinite; }
+.ticker-sms .ticker-inner { animation: tickerSms 60s linear infinite; }
+.ticker-content { display: flex; gap: 40px; flex-shrink: 0; }
+.ticker-content span { white-space: nowrap; font-size: 13px; }
+@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@keyframes tickerSms { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* duplicate for infinite scroll */
+.ticker .ticker-content::after { content: attr(data-duplicate); }
+
+/* section label + deposit list */
+.section-label { max-width: 1200px; margin: 0 auto; padding: 16px 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.benefit-badge { background: #c00; color: #fff; padding: 6px 12px; border-radius: 4px; font-size: 13px; font-weight: bold; }
+.section-label h2 { margin: 0; font-size: 1.1rem; }
+.deposit-table-wrap { background: #f8f8f8; padding: 16px 20px; }
+.deposit-list { max-width: 1200px; margin: 0 auto; column-count: 2; column-gap: 24px; }
+@media (min-width: 768px) { .deposit-list { column-count: 3; } }
+@media (min-width: 1024px) { .deposit-list { column-count: 4; } }
+.deposit-list li { font-size: 13px; padding: 4px 0; break-inside: avoid; }
+
+/* service nav - 원본처럼 다크 배경 + 회색 버튼 */
+.service-nav { max-width: 1200px; margin: 0 auto; padding: 24px 20px; background: #1a1a2e; color: #fff; }
+.service-nav h2 { margin: 0 0 16px; font-size: 1.1rem; color: #fff; }
+.service-nav ul { display: flex; flex-wrap: wrap; gap: 12px; }
+.service-nav a { display: inline-block; padding: 12px 20px; background: #5a5a6e; color: #fff; border-radius: 6px; }
+.service-nav a:hover { background: #6a6a7e; text-decoration: none; color: #fff; }
+
+/* trust carousel */
+.trust-carousel-wrap { background: #eee; padding: 20px 0; overflow: hidden; }
+.trust-carousel { overflow: hidden; display: flex; animation: trustScroll 30s linear infinite; width: max-content; }
+.trust-track { display: flex; gap: 24px; flex-shrink: 0; width: max-content; }
+.trust-item { flex-shrink: 0; padding: 12px 24px; background: #fff; border-radius: 8px; font-size: 14px; font-weight: 500; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+@keyframes trustScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* benefits */
+.benefits { max-width: 1200px; margin: 0 auto; padding: 40px 20px; text-align: center; }
+.benefits h2 { margin: 0 0 24px; font-size: 1.25rem; }
+.benefit-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-bottom: 24px; }
+.benefit-card { background: #f8f9fa; border-radius: 12px; padding: 24px; text-align: center; }
+.benefit-card h3 { margin: 0 0 8px; font-size: 1rem; }
+.benefit-card p { margin: 0; font-size: 14px; color: #555; }
+.benefit-icon { font-size: 2rem; margin-top: 12px; }
+
+/* CTA button */
+.cta-btn { display: inline-block; padding: 14px 28px; background: #c00; color: #fff; font-size: 1rem; font-weight: bold; border-radius: 8px; }
+.cta-btn:hover { background: #a00; color: #fff; text-decoration: none; }
+.cta-sms::before { content: "👉 "; }
+
+/* reviews - 카드형으로 구분 */
+.reviews { max-width: 1200px; margin: 0 auto; padding: 40px 20px; background: #f5f5f5; }
+.reviews h2 { margin: 0 0 20px; font-size: 1.25rem; }
+.review-list { margin: 0 0 20px; }
+.review-list li { padding: 14px 16px; margin-bottom: 10px; background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.08); border-left: 4px solid #1a1a2e; }
+.review-list a { display: block; margin-bottom: 6px; color: #333; }
+.review-list a:hover { color: #0066cc; }
+.review-date { font-size: 12px; color: #888; }
+.review-more { display: inline-block; padding: 10px 20px; background: #1a1a2e; color: #fff; border-radius: 6px; }
+.review-more:hover { text-decoration: none; background: #2a2a4e; color: #fff; }
+
+/* appliances */
+.appliances { max-width: 1200px; margin: 0 auto; padding: 40px 20px; text-align: center; background: #f8f9fa; }
+.appliances h2 { margin: 0 0 24px; font-size: 1.25rem; }
+.appliance-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 24px; }
+.appliance-card { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+.appliance-card h3 { margin: 0 0 8px; font-size: 1rem; }
+.appliance-card .price { margin: 0 0 12px; font-size: 13px; color: #c00; }
+.appliance-card .price del { color: #888; margin-right: 8px; }
+.appliance-img { height: 120px; border-radius: 8px; background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 100%); border: 2px dashed #ccc; display: flex; align-items: center; justify-content: center; color: #999; font-size: 13px; }
+.appliance-img::after { content: "이미지"; }
+
+/* certifications */
+.certifications { max-width: 1200px; margin: 0 auto; padding: 40px 20px; text-align: center; }
+.certifications h2 { margin: 0 0 24px; font-size: 1.25rem; }
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 24px; }
+.cert-card { background: #f8f9fa; border-radius: 12px; padding: 24px; }
+.cert-card h3 { margin: 0 0 8px; font-size: 1rem; }
+.cert-card p { margin: 0 0 12px; font-size: 14px; color: #555; }
+.cert-img { height: 140px; border-radius: 8px; background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 100%); border: 2px dashed #ccc; display: flex; align-items: center; justify-content: center; color: #999; font-size: 13px; }
+.cert-img::after { content: "인증서 이미지"; }
+
+/* rental */
+.rental { max-width: 1200px; margin: 0 auto; padding: 40px 20px; text-align: center; background: #1a1a2e; color: #fff; border-radius: 12px; margin-inline: 20px; }
+.rental h2 { margin: 0 0 8px; font-size: 1.25rem; }
+.rental p { margin: 0 0 16px; color: #ddd; }
+.rental-link { display: inline-block; padding: 12px 24px; background: #ffd700; color: #1a1a2e; font-weight: bold; border-radius: 8px; margin-bottom: 16px; }
+.rental-link:hover { text-decoration: none; background: #ffe44d; color: #1a1a2e; }
+.rental .cta-btn { background: #c00; margin-top: 8px; }
+.rental-img { height: 100px; border-radius: 8px; margin: 1rem auto 0; max-width: 400px; border: 2px dashed rgba(255,255,255,.4); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.6); font-size: 13px; }
+.rental-img::after { content: "렌탈 이미지"; }
+
+/* agree modal */
+.modal-agree .agree-inner { padding-top: 8px; }
+.checkbox-wrap { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; cursor: pointer; }
+.checkbox-wrap input { width: 18px; height: 18px; }
+.agree-text { font-size: 13px; color: #555; margin-bottom: 20px; padding: 12px; background: #f5f5f5; border-radius: 6px; }
+.agree-text p { margin: 0 0 8px; }
+.agree-text p:last-child { margin-bottom: 0; }
+
+/* quick menu */
+.quick-menu { position: fixed; right: 20px; bottom: 20px; z-index: 100; display: flex; flex-direction: column; gap: 8px; }
+.quick-item { display: block; width: 48px; height: 48px; line-height: 48px; text-align: center; background: #1a1a2e; color: #fff; border-radius: 50%; font-size: 11px; box-shadow: 0 2px 10px rgba(0,0,0,.2); }
+.quick-item:hover { background: #2a2a4e; color: #fff; text-decoration: none; }
+.quick-top { font-size: 18px; line-height: 48px; }
+
