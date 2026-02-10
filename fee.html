@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인터넷가입 요금조회 - 인터넷가입연구소</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- 헤더 (메인과 동일) -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M12 12l9-5"/><path d="M12 12v9.5"/><path d="M12 12L3 7"/></svg></span>
+        <span class="logo-text">인터넷가입연구소</span>
+      </a>
+      <nav class="nav">
+        <ul>
+          <li><a href="fee.html?tab=sk">SK인터넷</a></li>
+          <li><a href="fee.html?tab=lg">LG인터넷</a></li>
+          <li><a href="fee.html?tab=kt">KT인터넷</a></li>
+          <li><a href="fee.html?tab=al">알뜰상품</a></li>
+          <li><a href="index.html#review">후기</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="https://pf.kakao.com/_vtNDj" target="_blank" rel="noopener" class="btn btn-kakao">카톡상담</a>
+        <a href="https://pf.kakao.com/_vtNDj" target="_blank" rel="noopener" class="btn btn-consult">상담신청</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 요금 계산기 (상단 메뉴 '인터넷가입' 전용 페이지) -->
+  <section class="fee-section fee-page">
+    <div class="fee-inner">
+      <div class="fee-tabs" role="tablist">
+        <button type="button" class="fee-tab is-active" data-carrier="sk" role="tab">SK인터넷</button>
+        <button type="button" class="fee-tab" data-carrier="lg" role="tab">LG인터넷</button>
+        <button type="button" class="fee-tab" data-carrier="kt" role="tab">KT인터넷</button>
+        <button type="button" class="fee-tab" data-carrier="al" role="tab">알뜰상품</button>
+      </div>
+
+      <div class="fee-panels">
+        <!-- SK인터넷 -->
+        <div class="fee-panel is-active" data-carrier="sk">
+          <div class="fee-panel-head">
+            <h2 class="fee-panel-title">SK인터넷</h2>
+            <a href="index.html" class="fee-home">HOME</a>
+          </div>
+          <div class="fee-row">
+            <span class="fee-row-label">인터넷속도 선택</span>
+            <div class="fee-options" data-row="speed">
+              <button type="button" class="fee-opt is-selected" data-idx="0"><span class="fee-opt-name">100메가</span><span class="fee-opt-sub">검색위주</span></button>
+              <button type="button" class="fee-opt" data-idx="1"><span class="fee-opt-name">500메가</span><span class="fee-opt-sub">동영상/게임</span></button>
+              <button type="button" class="fee-opt" data-idx="2"><span class="fee-opt-name">1기가</span><span class="fee-opt-sub">개인방송/대용량 다운 전문</span></button>
+            </div>
+          </div>
+          <div class="fee-row">
+            <span class="fee-row-label">희망상품 선택</span>
+            <div class="fee-options" data-row="product">
+              <button type="button" class="fee-opt is-selected" data-idx="0"><span class="fee-opt-name">인터넷</span></button>
+              <button type="button" class="fee-opt" data-idx="1"><span class="fee-opt-name">BTV이코노미</span><span class="fee-opt-sub">184채널</span></button>
+              <button type="button" class="fee-opt" data-idx="2"><span class="fee-opt-name">BTV스탠다드</span><span class="fee-opt-sub">226채널</span></button>
+              <button type="button" class="fee-opt" data-idx="3"><span class="fee-opt-name">BTV ALL</span><span class="fee-opt-sub">252채널</span></button>
+            </div>
+          </div>
+          <div class="fee-row">
+            <span class="fee-row-label">결합유무 선택</span>
+            <div class="fee-options" data-row="bundle">
+              <button type="button" class="fee-opt is-selected" data-idx="0"><span class="fee-opt-name">홈결합</span><span class="fee-opt-sub">결합없는 기본형</span></button>
+              <button type="button" class="fee-opt" data-idx="1"><span class="fee-opt-name">요즘가족결합</span><span class="fee-opt-sub">1~5회선 결합 할인</span></button>
+              <button type="button" class="fee-opt" data-idx="2"><span class="fee-opt-name">온가족 할인</span><span class="fee-opt-sub">SK휴대폰 장기고객 결합</span></button>
+              <button type="button" class="fee-opt" data-idx="3"><span class="fee-opt-name">패밀리</span><span class="fee-opt-sub">사용중인 SK인터넷과 결합</span></button>
+            </div>
+          </div>
+          <div class="fee-total-wrap">
+            <p class="fee-total">총 합산요금 : <strong class="fee-total-amount">22,000</strong>원</p>
+            <p class="fee-total-note">3년 약정, VAT 포함</p>
+          </div>
+          <div class="fee-bundle-info">
+            <h3>결합상품안내</h3>
+            <p class="bundle-subtitle">[SK 요즘가족결합] 휴대폰 요금 할인 총액</p>
+            <table class="bundle-table">
+              <thead>
+                <tr><th>구분</th><th>100메가 인터넷</th><th>500메가, 1기가 인터넷</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1회선 결합 할인금액</td><td>3,500원</td><td>3,500원</td></tr>
+                <tr><td>2회선 결합 할인금액</td><td>7,000원 (회선당 3,500원)</td><td>7,000원 (회선당 3,500원)</td></tr>
+                <tr><td>3회선 결합 할인금액</td><td>18,000원 (회선당 6,000원)</td><td>18,000원 (회선당 6,000원)</td></tr>
+                <tr><td>4~5회선 결합 할인금액</td><td>18,000원 (회선당 4,500원/3,600원)</td><td>24,000원 (회선당 6,000원/4,800원)</td></tr>
+              </tbody>
+            </table>
+            <p class="bundle-note">결합 대표회선 모바일 BTV데이터 팩 무료(모바일 BTV동시시청 4인까지, 모바일 BTV시청 데이터 1인한정(일1GB)제공)</p>
+            <p class="bundle-note">인터넷 2회선까지 중복할인 가능 / 가족, 예비부부, 동거인 1인 결합가능(등본 첨부)</p>
+            <h3>가족 모바일 사용년수 결합할인(온가족할인)</h3>
+            <table class="bundle-table">
+              <thead>
+                <tr><th>결합년수</th><th>요금제</th><th>구요금제 할인</th><th>신요금제 할인</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>10년 미만</td><td>-</td><td>10%</td><td>할인없음</td></tr>
+                <tr><td>20년 미만</td><td>-</td><td>20%</td><td>할인없음</td></tr>
+                <tr><td>30년 미만</td><td>-</td><td>30%</td><td>10%</td></tr>
+                <tr><td>30년 이상</td><td>-</td><td>50%</td><td>30%</td></tr>
+              </tbody>
+            </table>
+            <p class="bundle-note bundle-highlight">모바일 가족모두 기본료 할인</p>
+            <h3>패밀리 결합상품</h3>
+            <p class="bundle-desc">패밀리 결합상품은 기존 사용중인 본인 명의 또는 가족명의 SKT 인터넷이 있을 경우 인터넷끼리 결합해서 할인 받는 상품입니다.</p>
+          </div>
+        </div>
+
+        <!-- LG인터넷 -->
+        <div class="fee-panel" data-carrier="lg">
+          <div class="fee-panel-head">
+            <h2 class="fee-panel-title">LG인터넷</h2>
+            <a href="index.html" class="fee-home">HOME</a>
+          </div>
+          <div class="fee-row">
+            <span class="fee-row-label">인터넷속도 선택</span>
+            <div class="fee-options" data-row="speed">
+              <button type="button" class="fee-opt is-selected" data-idx="0"><span class="fee-opt-name">100메가</span><span class="fee-opt-sub">검색위주</span></button>
+              <button type="button" class="fee-opt" data-idx="1"><span class="fee-opt-name">500메가</span><span class="fee-opt-sub">동영상/게임</span></button>
+              <button type="button" class="fee-opt" data-idx="2"><span class="fee-opt-name">1기가</span><span class="fee-opt-sub">개인방송/대용량 다운 전문</span></button>
+            </div>
+          </div>
+          <div class="fee-row">
+            <span class="fee-row-label">희망상품 선택</span>
+            <div class="fee-options" data-row="product">
+              <button type="button" class="fee-opt is-selected" data-idx="0"><span class="fee-opt-name">인터넷</span></button>
+              <button type="button" class="fee-opt" data-idx="1"><span class="fee-opt-name">TV베이직</span><span class="fee-opt-sub">211채널</span></button>
+              <button type="button" class="fee-opt" data-idx="2"><span class="fee-opt-name">TV프라임 라이트</span><span class="fee-opt-sub">259채널</span></button>
+              <button type="button" class="fee-opt" data-idx="3"><span class="fee-opt-name">TV프리미엄 디즈니+</span><span class="fee-opt-sub">259채널</span></button>
+            </div>
+          </div>
+          <div class="fee-row">
+            <span class="fee-row-label">결합유무 선택</span>
+            <div class="fee-options" data-row="bundle">
+              <button type="button" class="fee-opt is-selected" data-idx="0"><span class="fee-opt-name">홈결합</span><span class="fee-opt-sub">결합없는 기본형</span></button>
+              <button type="button" class="fee-opt" data-idx="1"><span class="fee-opt-name">참쉬운 가족결합</span><span class="fee-opt-sub">LG휴대폰 결합</span></button>
+              <button type="button" class="fee-opt" data-idx="2"><span class="fee-opt-name">패밀리</span><span class="fee-opt-sub">사용중인 LG인터넷과 결합</span></button>
+            </div>
+          </div>
+          <div class="fee-total-wrap">
+            <p class="fee-total">총 합산요금 : <strong class="fee-total-amount">21,000</strong>원</p>
+            <p class="fee-total-note">3년 약정, VAT 포함</p>
+          </div>
+          <div class="fee-bundle-info">
+            <h3>결합상품안내</h3>
+            <p class="bundle-subtitle">[LG 참쉬운가족결합] 휴대폰 요금 할인</p>
+            <table class="bundle-table">
+              <thead>
+                <tr><th>구분</th><th>100메가 인터넷</th><th>500메가, 1기가 인터넷</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1회선 결합 할인금액</td><td>3,500원</td><td>3,500원</td></tr>
+                <tr><td>2회선 결합 할인금액</td><td>7,000원 (회선당 3,500원)</td><td>7,000원 (회선당 3,500원)</td></tr>
+                <tr><td>3회선 이상 결합 할인</td><td>LG휴대폰 결합 할인</td><td>LG휴대폰 결합 할인</td></tr>
+              </tbody>
+            </table>
+            <h3>패밀리 결합상품</h3>
+            <p class="bundle-desc">패밀리 결합상품은 기존 사용중인 본인 명의 또는 가족명의 LG 인터넷이 있을 경우 인터넷끼리 결합해서 할인 받는 상품입니다.</p>
+          </div>
+        </div>
+
+        <!-- KT인터넷 -->
+        <div class="fee-panel" data-carrier="kt">
+          <div class="fee-panel-head">
+            <h2 class="fee-panel-title">KT인터넷</h2>
+            <a href="index.html" class="fee-home">HOME</a>
+          </div>
+          <div class="fee-row">
+            <span class="fee-row-label">인터넷속도 선택</span>
+            <div class="fee-options" data-row="speed">
+              <button type="button" class="fee-opt is-selected" data-idx="0"><span class="fee-opt-name">100메가</span><span class="fee-opt-sub">검색위주</span></button>
+              <button type="button" class="fee-opt" data-idx="1"><span class="fee-opt-name">500메가</span><span class="fee-opt-sub">동영상/게임</span></button>
+              <button type="button" class="fee-opt" data-idx="2"><span class="fee-opt-name">1기가</span><span class="fee-opt-sub">개인방송/대용량 다운 전문</span></button>
+            </div>
+          </div>
+          <div class="fee-row">
+            <span class="fee-row-label">희망상품 선택</span>
+            <div class="fee-options" data-row="product">
+              <button type="button" class="fee-opt is-selected" data-idx="0"><span class="fee-opt-name">인터넷</span></button>
+              <button type="button" class="fee-opt" data-idx="1"><span class="fee-opt-name">TV베이직</span><span class="fee-opt-sub">234채널</span></button>
+              <button type="button" class="fee-opt" data-idx="2"><span class="fee-opt-name">TV라이트</span><span class="fee-opt-sub">239채널</span></button>
+              <button type="button" class="fee-opt" data-idx="3"><span class="fee-opt-name">TV에센스</span><span class="fee-opt-sub">266채널</span></button>
+            </div>
+          </div>
+          <div class="fee-row">
+            <span class="fee-row-label">결합유무 선택</span>
+            <div class="fee-options" data-row="bundle">
+              <button type="button" class="fee-opt is-selected" data-idx="0"><span class="fee-opt-name">홈결합</span><span class="fee-opt-sub">결합없는 기본형</span></button>
+              <button type="button" class="fee-opt" data-idx="1"><span class="fee-opt-name">총액결합</span><span class="fee-opt-sub">KT휴대폰 결합</span></button>
+              <button type="button" class="fee-opt" data-idx="2"><span class="fee-opt-name">패밀리</span><span class="fee-opt-sub">사용중인 KT인터넷과 결합</span></button>
+            </div>
+          </div>
+          <div class="fee-total-wrap">
+            <p class="fee-total">총 합산요금 : <strong class="fee-total-amount">22,000</strong>원</p>
+            <p class="fee-total-note">3년 약정, VAT 포함</p>
+          </div>
+          <div class="fee-bundle-info">
+            <h3>결합상품안내</h3>
+            <p class="bundle-subtitle">[KT 총액결합] 휴대폰 요금 할인</p>
+            <table class="bundle-table">
+              <thead>
+                <tr><th>구분</th><th>100메가 인터넷</th><th>500메가, 1기가 인터넷</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1회선 결합 할인금액</td><td>3,500원</td><td>3,500원</td></tr>
+                <tr><td>2회선 결합 할인금액</td><td>7,000원 (회선당 3,500원)</td><td>7,000원 (회선당 3,500원)</td></tr>
+                <tr><td>3회선 이상 결합 할인</td><td>KT휴대폰 결합 할인</td><td>KT휴대폰 결합 할인</td></tr>
+              </tbody>
+            </table>
+            <h3>패밀리 결합상품</h3>
+            <p class="bundle-desc">패밀리 결합상품은 기존 사용중인 본인 명의 또는 가족명의 KT 인터넷이 있을 경우 인터넷끼리 결합해서 할인 받는 상품입니다.</p>
+          </div>
+        </div>
+
+        <!-- 알뜰상품 -->
+        <div class="fee-panel" data-carrier="al">
+          <div class="fee-panel-head">
+            <h2 class="fee-panel-title">알뜰상품</h2>
+            <a href="index.html" class="fee-home">HOME</a>
+          </div>
+          <div class="fee-row">
+            <span class="fee-row-label">제공사 선택</span>
+            <div class="fee-options" data-row="speed">
+              <button type="button" class="fee-opt is-selected" data-idx="0"><span class="fee-opt-name">SK BTV알뜰</span></button>
+              <button type="button" class="fee-opt" data-idx="1"><span class="fee-opt-name">KT스카이라이프</span></button>
+              <button type="button" class="fee-opt" data-idx="2"><span class="fee-opt-name">LG헬로비전</span></button>
+            </div>
+          </div>
+          <div class="fee-row">
+            <span class="fee-row-label">인터넷속도 선택</span>
+            <div class="fee-options" data-row="product">
+              <button type="button" class="fee-opt is-selected" data-idx="0"><span class="fee-opt-name">100메가</span><span class="fee-opt-sub">검색위주</span></button>
+              <button type="button" class="fee-opt" data-idx="1"><span class="fee-opt-name">500메가</span><span class="fee-opt-sub">동영상/게임</span></button>
+            </div>
+          </div>
+          <div class="fee-row">
+            <span class="fee-row-label">결합유무 선택</span>
+            <div class="fee-options" data-row="bundle">
+              <button type="button" class="fee-opt is-selected" data-idx="0"><span class="fee-opt-name">홈결합</span><span class="fee-opt-sub">결합없는 기본형</span></button>
+              <button type="button" class="fee-opt" data-idx="1"><span class="fee-opt-name">요즘가족결합</span><span class="fee-opt-sub">1~5회선 결합 할인</span></button>
+            </div>
+          </div>
+          <div class="fee-total-wrap">
+            <p class="fee-total">총 합산요금 : <strong class="fee-total-amount">16,500</strong>원</p>
+            <p class="fee-total-note">3년 약정, VAT 포함</p>
+          </div>
+          <div class="fee-bundle-info">
+            <h3>결합상품안내</h3>
+            <p class="bundle-subtitle">알뜰상품 요즘가족결합 할인</p>
+            <table class="bundle-table">
+              <thead>
+                <tr><th>구분</th><th>100메가 인터넷</th><th>500메가 인터넷</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1회선 결합 할인금액</td><td>3,500원</td><td>3,500원</td></tr>
+                <tr><td>2회선 결합 할인금액</td><td>7,000원 (회선당 3,500원)</td><td>7,000원 (회선당 3,500원)</td></tr>
+              </tbody>
+            </table>
+            <h3>패밀리 결합상품</h3>
+            <p class="bundle-desc">알뜰상품의 패밀리 결합은 기존 사용중인 인터넷과 결합하여 할인 받을 수 있는 상품입니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/fee-calculator.js"></script>
+</body>
+</html>
